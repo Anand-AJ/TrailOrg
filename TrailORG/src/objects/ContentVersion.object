@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ContentSize</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Document_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Type</label>
+        <picklist>
+            <controllingField>Object_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Unrestricted type 1</fullName>
+                <default>false</default>
+                <controllingFieldValues>Account</controllingFieldValues>
+                <controllingFieldValues>Offer</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unrestricted type 2</fullName>
+                <default>false</default>
+                <controllingFieldValues>Account</controllingFieldValues>
+                <controllingFieldValues>Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unrestricted type 3</fullName>
+                <default>false</default>
+                <controllingFieldValues>Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Restricted type 1</fullName>
+                <default>false</default>
+                <controllingFieldValues>Account</controllingFieldValues>
+                <controllingFieldValues>Offer</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Restricted type 2</fullName>
+                <default>false</default>
+                <controllingFieldValues>Account</controllingFieldValues>
+                <controllingFieldValues>Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Restricted type 3</fullName>
+                <default>false</default>
+                <controllingFieldValues>Opportunity</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confidential type 1</fullName>
+                <default>false</default>
+                <controllingFieldValues>Offer</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confidential type 2</fullName>
+                <default>false</default>
+                <controllingFieldValues>Offer</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confidential type 3</fullName>
+                <default>false</default>
+                <controllingFieldValues>Offer</controllingFieldValues>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FileExtension</fullName>
+    </fields>
+    <fields>
+        <fullName>FileType</fullName>
+    </fields>
+    <fields>
+        <fullName>IsAssetEnabled</fullName>
+    </fields>
+    <fields>
+        <fullName>Language</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Object_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Object Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Offer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SharingOption</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>SharingPrivacy</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>TagCsv</fullName>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <recordTypes>
+        <fullName>Confidential</fullName>
+        <active>true</active>
+        <label>Confidential</label>
+        <picklistValues>
+            <picklist>Document_Type__c</picklist>
+            <values>
+                <fullName>Confidential type 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confidential type 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confidential type 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restricted type 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restricted type 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restricted type 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unrestricted type 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unrestricted type 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unrestricted type 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Object_Type__c</picklist>
+            <values>
+                <fullName>Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>unrestricted</fullName>
+        <active>true</active>
+        <label>unrestricted</label>
+        <picklistValues>
+            <picklist>Document_Type__c</picklist>
+            <values>
+                <fullName>Confidential type 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confidential type 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confidential type 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restricted type 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restricted type 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restricted type 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unrestricted type 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unrestricted type 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unrestricted type 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Object_Type__c</picklist>
+            <values>
+                <fullName>Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <searchResultsAdditionalFields>VERSION.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>VERSION.CONTENT_SIZE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>VERSION.FILE_EXTENSION</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>VERSION.LAST_UPDATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>VERSION.OWNER</searchResultsAdditionalFields>
+    </searchLayouts>
+</CustomObject>
