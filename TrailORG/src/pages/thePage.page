@@ -1,0 +1,25 @@
+<apex:page standardController="customdetails__c" extensions="MultiAdd" recordSetVar="customdetails__c">
+    <apex:form >
+        <apex:pageblock id="pb" >
+            <apex:pageBlockButtons >
+                <apex:commandbutton value="Add" action="{!Add}" rerender="pb1"/>
+                <apex:commandButton id="Save" action="{!Save}" value="Save"/>
+                <apex:commandButton id="Cancel" action="{!Cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+        <apex:pageBlock id="pb1">
+                <apex:repeat value="{!lstInner}" var="e1" id="therepeat">
+                    <apex:pageBlockSection >
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel >First Name</apex:outputLabel>
+                            <apex:inputField id="FirstName" value="{!e1.acct1.Name}"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel >Last name</apex:outputLabel>
+                            <apex:inputField id="LastName" value="{!e1.acct1.Last_Name__c}"/>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                </apex:repeat>
+         </apex:pageBlock>
+        </apex:pageblock>
+    </apex:form>
+    </apex:page>

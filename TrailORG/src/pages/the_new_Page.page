@@ -1,0 +1,6 @@
+<apex:page standardController="Opportunity" recordSetVar="sample">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Hai Anand</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:page controller="addProductsRedirect">
+<apex:outputField value="{!opp.Id}"/>-
+<apex:outputField value="{!opp.Name}"/>
+
+<apex:form >
+<apex:commandLink value="Add Product" action="{!addProduct}">
+<apex:param name="addProductsURL" value="{!URLFOR($Action.OpportunityLineItem.AddProduct)}" assignTo="{!addProductsURL}"/>
+</apex:commandLink>
+</apex:form>
+{!URLFOR($Action.OpportunityLineItem.AddProduct)}
+</apex:page>

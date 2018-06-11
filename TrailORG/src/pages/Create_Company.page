@@ -1,0 +1,15 @@
+<apex:page controller="WizardController">
+<apex:pageBlock title="Company">
+<apex:pageMessages ></apex:pageMessages>
+<apex:form >
+Company Name:<apex:inputText label="Company Name:" value="{!comp.Name}"  id="name"/><br></br>
+Address:<apex:inputText label="Address" value="{!comp.Address__c}"/><br></br>
+Company Owner Name<apex:inputText label="Company Owner Name:" value="{!comp.Company_Owner_Name__c}"/><br></br>
+Country<apex:inputText label="Country:" value="{!comp.Country__c}"/><br></br>
+State:<apex:inputText label="State:" value="{!comp.State__c}"/><br></br>
+Zip code:<apex:inputText label="Zip code:" value="{!comp.Zip_Code__c}"/><br><br></br></br>
+          <apex:commandButton action="{!save}" value="Save"/>
+          <apex:commandButton action="{!createEmployee}" value="Create Employee"  immediate="true"/>                              
+</apex:form>
+</apex:pageBlock>
+</apex:page>

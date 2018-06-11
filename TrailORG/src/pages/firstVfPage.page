@@ -1,0 +1,6 @@
+<apex:page Controller="myFirstApexClass">
+ 
+  <h1>Congratulations</h1>
+  <h2>{!greetings}</h2>
+ 
+</apex:page>

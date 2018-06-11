@@ -1,0 +1,23 @@
+<apex:page controller="WizardController">
+ <apex:pageBlock title="Employee">
+<apex:pageMessages ></apex:pageMessages>
+
+<apex:form >
+
+Name:<apex:inputText value="{!emp.Name}"  id="name"/><br></br>
+Email:<apex:inputText value="{!emp.Email__c}"/><br></br>
+Designation:<apex:inputText value="{!emp.Employee_Designation__c}"/><br></br>
+Phone:<apex:inputText value="{!emp.Phone__c}"/><br></br>
+<br><br></br></br>
+
+
+          <apex:commandButton action="{!save1}" value="Save"/> 
+          <apex:commandButton action="{!savenew}" value="Save and New"/> 
+
+</apex:form>
+
+
+
+</apex:pageBlock>
+
+</apex:page>

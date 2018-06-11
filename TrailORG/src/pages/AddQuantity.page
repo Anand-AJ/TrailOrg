@@ -1,0 +1,12 @@
+<apex:page Controller="productAdd">
+    <apex:form >
+        <apex:pageBlock > 
+            <apex:pageBlockTable value="{!selectedprodList}" var="c" id="table"> 
+            <apex:column >
+                        <apex:facet name="header">Product Name</apex:facet>
+                        <apex:outputLink value="/{!c.cont.Name}"></apex:outputLink>
+             </apex:column>                
+            </apex:pageBlockTable> 
+        </apex:pageBlock> 
+    </apex:form> 
+</apex:page>

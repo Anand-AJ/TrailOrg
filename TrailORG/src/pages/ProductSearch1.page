@@ -1,0 +1,24 @@
+<apex:page controller="productAdd">
+    <table  width="90%">
+        <apex:form >
+         <apex:outputLabel for="searchText">Opportunity Product</apex:outputLabel><br></br>
+        <apex:inputtext value="{!AccSearchString}" />
+        <apex:commandButton value="Search" action="{!SearchAccountRec}" />
+        <apex:pageBlock rendered="{!If(lstAccount.size!=null,true,false)}" title="Search Result" >
+                <apex:pageBlockTable value="{!lstAccount}" var="l" >               
+                    <apex:column >
+                        <apex:facet name="header">Select</apex:facet>
+                        <apex:inputCheckbox >
+                            <apex:actionSupport event="onclick" action="{!getSelected}" onsubmit="checkAll(this)"/>
+                        </apex:inputCheckbox>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">name</apex:facet>
+                        <apex:outputLink value="/{!l.id}">{!l.name}</apex:outputLink>
+                    </apex:column>                                      
+                </apex:pageBlockTable>                        
+                <apex:commandButton value="Add Quantity" action="{!AddQuantity}"/>
+        </apex:pageBlock>                      
+        </apex:form> 
+    </table>
+</apex:page>

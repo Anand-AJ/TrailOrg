@@ -1,0 +1,11 @@
+<apex:page sidebar="false" showHeader="true" >
+    <h1>
+        First visualforce page
+    </h1>
+    <apex:pageBlock title="A Block Title">
+    	<apex:pageBlockSection title="A Section">This is a new section.</apex:pageBlockSection>
+    </apex:pageBlock>
+    <p>
+        This is easy to create, quite similar to HTML.
+    </p>
+</apex:page>

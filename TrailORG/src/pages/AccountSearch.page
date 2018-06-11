@@ -1,0 +1,24 @@
+<apex:page standardController="Opportunity" extensions="AccountSearch" >
+    <apex:form >
+    <apex:outputLabel for="searchText">Opportunity Product</apex:outputLabel><br></br>
+        <apex:inputtext value="{!AccSearchString}" />
+        <apex:commandButton value="Search" action="{!SearchAccountRec}" />
+        <apex:pageBlock rendered="{!If(lstAccount.size>0,true,false)}" title="Search Result">
+            <apex:pageBlockTable value="{!lstAccount}" var="acc">
+                <apex:column >
+                    <apex:facet name="header">Select</apex:facet><apex:inputCheckbox >
+                    <apex:actionSupport event="onclick" action="{!GetSelected}" onsubmit="checkAll(this)" rerender="Selected_PBS"/>
+                    </apex:inputCheckbox>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">name</apex:facet>
+                    <apex:outputLink value="/{!acc.id}">{!acc.name}</apex:outputLink>
+                </apex:column>
+            </apex:pageBlockTable>
+          <apex:commandButton value="Add" action="{!step1}"/>
+        </apex:pageBlock>
+        <apex:pageBlock rendered="{!If(lstAccount.size==0 && isResultDisplay == true,true,false)}" title="Search Result">
+            <apex:outputLabel value="No Result Found"></apex:outputLabel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

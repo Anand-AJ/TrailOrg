@@ -1,0 +1,11 @@
+<apex:page sidebar="false" standardController="Account">
+    
+    <apex:pageBlock title="Account Summary">
+        <apex:pageBlockSection >
+            
+            Name: {! Account.name }
+            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:page>

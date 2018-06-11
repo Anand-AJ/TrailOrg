@@ -1,0 +1,37 @@
+<apex:page standardController="Opportunity" extensions="OppControllerExtension" contentType="pdf" >
+ <apex:dataTable value="{!Opportunity}" var="opp" id="theTable" rowClasses="odd,even" styleClass="tableClass" cellspacing="5" border="2">                
+                <apex:facet name="header">Opportunities</apex:facet>                
+                <apex:column >
+                        <apex:facet name="header">Name</apex:facet>                        
+                        <apex:outputText value="{!opp.name}"/>
+                </apex:column>
+                <apex:column >
+                        <apex:facet name="header">Account</apex:facet>                        
+                        <apex:outputText value="{!opp.Account}"/>
+                </apex:column>
+       <apex:column >
+                        <apex:facet name="header">Probability</apex:facet>                       
+                        <apex:outputText value="{!opp.Probability}"/>
+                </apex:column>
+        <apex:column >
+                        <apex:facet name="header">Close Date</apex:facet>                       
+                        <apex:outputText value="{!opp.CloseDate}"/>
+                </apex:column>             
+       </apex:dataTable>
+<apex:dataTable value="{!oppprod}" var="prod"  rowClasses="odd,even"
+                        styleClass="tableClass" cellspacing="5" border="2">                
+                <apex:facet name="header">Products</apex:facet>                             
+                <apex:column >
+                        <apex:facet name="header">Discount</apex:facet>                        
+                        <apex:outputText value="{!prod.Discount}"/>
+                </apex:column>
+      <apex:column >
+                        <apex:facet name="header">Lisst Price</apex:facet>                        
+                        <apex:outputText value="{!prod.ListPrice}"/>
+                </apex:column>
+        <apex:column >
+                        <apex:facet name="header">Product Code</apex:facet>                       
+                        <apex:outputText value="{!prod.ProductCode}"/>
+                </apex:column>              
+       </apex:dataTable>
+</apex:page>

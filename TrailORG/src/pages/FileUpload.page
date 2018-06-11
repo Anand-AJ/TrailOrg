@@ -1,0 +1,30 @@
+<apex:page StandardController="Opportunity">
+    <apex:form >
+        <apex:pageBlock title="File Upload">
+            <apex:pageBlockSection showHeader="false" columns="8" id="block1">                
+                <apex:pageblockSectionItem >
+                <apex:outputPanel > 
+                    <apex:outputLabel value="Related To" for="relatedTo"/>                      
+                    <apex:inputCheckbox />                        
+                    &nbsp;&nbsp;
+                    <apex:outputLabel value="Type" for="type"/> 
+                    <apex:inputCheckbox />        
+                    &nbsp;&nbsp;
+                    <apex:outputLabel value="Security Level" for="securitylevel"/>                          
+                    <apex:inputCheckbox /> 
+                    &nbsp;
+                    <apex:outputLabel value="LOA" for="loa"/>
+                    <apex:inputCheckbox />            
+                    &nbsp;&nbsp;
+                    <apex:outputLabel value="Opportunity" for="opportunity"/>             
+                    <apex:inputCheckbox /> 
+                    &nbsp;&nbsp;
+                    <apex:outputLabel value="File Upload" for="filename"/> 
+                    <apex:inputCheckbox /> 
+                    &nbsp;&nbsp;
+                </apex:outputPanel>                    
+                </apex:pageBlockSectionItem>  
+            </apex:pageBlockSection>            
+        </apex:pageBlock>            
+    </apex:form>
+</apex:page>

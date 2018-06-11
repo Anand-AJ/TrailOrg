@@ -1,0 +1,28 @@
+<apex:page standardController="Account" extensions="MyVFPageController" >
+<apex:form >
+ <apex:commandButton action="{!abc}" value="Delete" reRender="theTable" onComplete="window.opener.location.reload();"/>
+<apex:dataTable value="{!Contacts}" var="w" id="theTable" rowClasses="odd,even"
+                        styleClass="tableClass" cellspacing="3">
+                <apex:facet name="caption"></apex:facet>
+                <apex:facet name="header">Contacts</apex:facet>
+                <apex:facet name="footer"></apex:facet>                 
+                 <apex:column >
+                        <apex:facet name="header">Select</apex:facet>                                                                       
+                        <apex:inputCheckbox value="{!w.selected}" />
+                </apex:column>                
+                <apex:column >
+                        <apex:facet name="header">Name</apex:facet>                       
+                        <apex:outputText value="{!w.con.Name}"/>
+                </apex:column>
+                <apex:column >
+                        <apex:facet name="header">Email</apex:facet>                        
+                        <apex:outputText value="{!w.con.Email}"/>
+                </apex:column>
+       <apex:column >
+
+                        <apex:facet name="header">Phone</apex:facet>                       
+                        <apex:outputText value="{!w.con.Phone}"/>
+                </apex:column>                    
+       </apex:dataTable>    
+    </apex:form>
+</apex:page>
